@@ -1,38 +1,120 @@
-.App {
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6,
+body.dark label,
+body.dark span,
+body.dark p {
+  color: #f5f5f5 !important;
+}
+
+body.dark select,
+body.dark input,
+body.dark textarea,
+body.dark button {
+  background-color: #1e1e1e !important;
+  color: #f5f5f5 !important;
+  border-color: #555;
+}
+
+body.dark .card {
+  background-color: #1e1e1e !important;
+  color: #f5f5f5 !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+body.dark .MuiPaper-root {
+  background-color: #1e1e1e !important;
+  color: #f5f5f5 !important;
+}
+
+.card-header {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 15px;
   text-align: center;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body.dark .card-header {
+  color: #f5f5f5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.top-bar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.tab-link {
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+  background-color: #f1f1f1;
+  transition: all 0.3s ease;
+}
+
+.tab-link:hover {
+  background-color: #ddd;
+}
+
+.tab-link.active {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: 600;
+}
+
+body.dark .tab-link {
+  background-color: #333;
+  color: #eee;
+}
+
+body.dark .tab-link.active {
+  background-color: #4dabf7;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.toggle-mode-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #555;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body.dark .toggle-mode-btn {
+  color: #ddd;
+}
+
+.mode-toggle-container {
+  padding: 10px 0;
 }

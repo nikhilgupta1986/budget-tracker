@@ -1,0 +1,79 @@
+/* src/styles/InsightsScreen.css */
+
+.insights-wrapper {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+  
+  .insights-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .insight-panel {
+    flex: 1;
+    min-width: 350px;
+    background: var(--card-bg, #fff);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .cards {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .metric-card {
+    flex: 1;
+    background: var(--card-accent, #f5f5f5);
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .chart-placeholder {
+    height: 200px;
+    background: #f0f0f0;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 16px;
+  }
+  
+  .chart-container {
+    width: 100%;
+    margin-bottom: 24px;
+    /* no height, no overflow */
+  }
+  
+  .chart-container canvas {
+    display: block;
+    width: 100% !important;
+    /* allow height auto so it scales by aspect ratio */
+    height: auto !important;
+  }
+
+  .insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    /* grid-auto-rows: auto is the default */
+  }
+  
+  
